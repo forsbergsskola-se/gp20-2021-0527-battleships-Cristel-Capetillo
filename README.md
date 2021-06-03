@@ -15,3 +15,12 @@
   - [Visual Studio](https://visualstudio.microsoft.com/downloads/)
   - [Rider for Unreal](https://www.jetbrains.com/lp/rider-unreal/)
   - [Visual Studio Code](https://code.visualstudio.com)
+## My results:
+- Fibonacci Numbers app:
+- 
+![fiboFinal](https://user-images.githubusercontent.com/69099899/120718729-0c13e380-c4ca-11eb-8fb9-0ddbe34efb5b.gif)
+
+- Random Numbers app:
+
+![randomFinal](https://user-images.githubusercontent.com/69099899/120718740-10400100-c4ca-11eb-9d02-2ea67e8ed045.gif)
+
