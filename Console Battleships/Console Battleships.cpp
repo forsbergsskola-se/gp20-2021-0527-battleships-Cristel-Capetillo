@@ -79,7 +79,7 @@ void playerInput(){
 
         cout << "X says: ";
         cin >> guessX;
-        if (guessX < 0 || guessX>2) {
+        if (guessX < 0 || guessX > 2) {
             isCorrectGuess = false;
             cin.clear();
             cin.ignore(256, '\n');
@@ -92,7 +92,7 @@ void playerInput(){
 
         cout << "Y says: ";
         cin >> guessY;
-        if (guessY < 0 || guessY>2) {
+        if (guessY < 0 || guessY > 2) {
             isCorrectGuess = false;
             cin.clear();
             cin.ignore(256, '\n');
