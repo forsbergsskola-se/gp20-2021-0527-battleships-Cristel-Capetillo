@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+    cout << "Welcome to the Random Number app!\nHere you can see how random numbers from 1-20 are distrubuted given a number of iterations. " << endl;
     cout << "Type your desired number of iterations: " << endl;
     float iterations;
     cin >> iterations;
