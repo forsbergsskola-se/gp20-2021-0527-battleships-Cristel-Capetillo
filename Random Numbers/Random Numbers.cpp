@@ -23,7 +23,7 @@ int main() {
 
     for (int i = 0; i < 20;i++) {
         float selectRandom = (randomPool[i] / iterations) * 100;
-        cout << "Number: " <<  i + 1  << " with a probability of: " << randomPool[i] << "(" << selectRandom << " % )" << endl;
+        cout << "Number: " <<  i + 1  << " might appear: " << randomPool[i] << " times " << " with a probability of (" << selectRandom << " % )" << endl;
     }
 }
 
