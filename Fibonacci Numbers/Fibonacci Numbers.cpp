@@ -42,9 +42,9 @@ int main() {
     cout << "Welcome to the Fibonacci finder! The app is ready to use. " << endl;
     cout << "Type your desired Fibonacci number: " << endl;
     cin >> n;
+
     auto start = high_resolution_clock::now();
     auto fibonacciNumber = getRecursiveFibonacci(n);
-
     auto stop = high_resolution_clock::now();
     milliseconds getDurationOne = duration_cast<milliseconds>(stop - start);
     cout << "Found the number " << fibonacciNumber << " in " << getDurationOne.count() << " milliseconds by the recursive method." << endl;
