@@ -1,15 +1,15 @@
 #include <iostream>
-#include <vector>
 #include <chrono>
+#include <vector>
 using namespace std;
 using namespace std::chrono;
 
-int getFibonacciRecursive(int n) {
+int getRecursiveFibonacci(int n) {
     if (n <= 1) return n;
-    return getFibonacciRecursive(n - 1) + getFibonacciRecursive(n - 2);
+    return getRecursiveFibonacci(n - 1) + getRecursiveFibonacci(n - 2);
 }
 
-int getFibonacciIteration(int n) {
+int getIterativeFibonacci(int n) {
     int a = 0, b = 1, c, i;
 
     if (n == 0) return a;
@@ -20,48 +20,50 @@ int getFibonacciIteration(int n) {
         b = c;
     }
     return b;
-    
 }
 
 int rememberFibonacci(int n) {
-    std::vector<int> fibonacciVector(n + 2);
+
+    std::vector<int> vectorForFibonacci(n + 2);
     int i;
-    fibonacciVector[0] = 0;
-    fibonacciVector[1] = 1;
+
+    vectorForFibonacci[0] = 0;
+    vectorForFibonacci[1] = 1;
 
     for (i = 2; i <= n; i++) {
-        fibonacciVector[i] = fibonacciVector[i - 1] + fibonacciVector[i - 2];
+        vectorForFibonacci[i] = vectorForFibonacci[i - 1] + vectorForFibonacci[i - 2];
     }
-
-    return fibonacciVector[n];
+    return vectorForFibonacci[n];
 }
+
 
 int main() {
     int n;
+    cout << "Welcome to the Fibonacci finder! The app is ready to use. " << endl;
     cout << "Type your desired Fibonacci number: " << endl;
     cin >> n;
-
     auto start = high_resolution_clock::now();
-    auto fibonacciNumber = getFibonacciRecursive(n);
+    auto fibonacciNumber = getRecursiveFibonacci(n);
+
     auto stop = high_resolution_clock::now();
-    milliseconds duration = duration_cast<milliseconds>(stop - start);
-    cout << "Found the number " << fibonacciNumber << " in " << duration.count() << " milliseconds by the recursive method." << endl;
+    milliseconds getDurationOne = duration_cast<milliseconds>(stop - start);
+    cout << "Found the number " << fibonacciNumber << " in " << getDurationOne.count() << " milliseconds by the recursive method." << endl;
 
     fibonacciNumber = 0;
 
     start = high_resolution_clock::now();
     fibonacciNumber = rememberFibonacci(n);
     stop = high_resolution_clock::now();
-    nanoseconds durationOne = duration_cast<nanoseconds>(stop - start);
-    cout << "Found the number " << fibonacciNumber << " in " << duration.count() << " nanoseconds by checking the storage of old numbers." << endl;
+    nanoseconds getDurationTwo = duration_cast<nanoseconds>(stop - start);
+    cout << "Found the number " << fibonacciNumber << " in " << getDurationTwo.count() << " nanoseconds by looking at the array storage." << endl;
 
     fibonacciNumber = 0;
 
     start = high_resolution_clock::now();
-    fibonacciNumber = getFibonacciIteration(n);
+    fibonacciNumber = getIterativeFibonacci(n);
     stop = high_resolution_clock::now();
-    durationOne = duration_cast<nanoseconds>(stop - start);
-    cout << "Found the number " << fibonacciNumber << " in " << duration.count() << " nanoseconds by the iterative method." << endl;
+    getDurationTwo = duration_cast<nanoseconds>(stop - start);
+    cout << "Found the number " << fibonacciNumber << " in " << getDurationTwo.count() << " nanoseconds by the iterative method." << endl;
 
     getchar();
 
