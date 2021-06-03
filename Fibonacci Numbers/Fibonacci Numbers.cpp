@@ -38,7 +38,7 @@ int rememberFibonacci(int n) {
 
 int main() {
     int n;
-    cout << "Type your desired number: " << endl;
+    cout << "Type your desired Fibonacci number: " << endl;
     cin >> n;
 
     auto start = high_resolution_clock::now();
@@ -60,7 +60,7 @@ int main() {
     start = high_resolution_clock::now();
     fibonacciNumber = getFibonacciIteration(n);
     stop = high_resolution_clock::now();
-    nanoseconds durationTwo = duration_cast<nanoseconds>(stop - start);
+    durationOne = duration_cast<nanoseconds>(stop - start);
     cout << "Found the number " << fibonacciNumber << " in " << duration.count() << " nanoseconds by the iterative method." << endl;
 
     getchar();
