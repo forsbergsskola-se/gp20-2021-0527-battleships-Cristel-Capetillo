@@ -76,7 +76,7 @@ void playerInput(){
     do {
         cout << "You have " << totalGuesses << " guesses left." << endl;
 
-        cout << "X says: ";
+        cout << "Type your guess of X coordinate: ";
         cin >> guessX;
         if (guessX < 0 || guessX > 2) {
             isCorrectGuess = false;
@@ -89,7 +89,7 @@ void playerInput(){
             isCorrectGuess = true;
         }
 
-        cout << "Y says: ";
+        cout << "Type your guess of Y coordinate: ";
         cin >> guessY;
         if (guessY < 0 || guessY > 2) {
             isCorrectGuess = false;
