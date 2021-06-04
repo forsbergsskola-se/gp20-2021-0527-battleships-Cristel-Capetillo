@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-#include <process.h>
 #include <cstdlib>
 #include <time.h>
 using namespace std;
@@ -123,8 +122,7 @@ void playerInput(){
 void main() {
     srand(time(NULL));
     cout << "Welcome to Lil Console Battleship! Game is ready." << endl << endl;
-    int grid[rowAmount][columnAmount];
-
+   
     createGrid();
     setShipCoordinates();
 
