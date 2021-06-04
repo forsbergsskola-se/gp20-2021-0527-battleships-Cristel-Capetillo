@@ -121,7 +121,7 @@ void playerInput(){
 
 void main() {
     srand(time(NULL));
-    cout << "Welcome to Lil Console Battleship! Game is ready." << endl << endl;
+    cout << "Welcome to Lil Console Battleship! Game is ready.\nPress 0, 1 or 2 to guess the coordinates." << endl << endl;
    
     createGrid();
     setShipCoordinates();
