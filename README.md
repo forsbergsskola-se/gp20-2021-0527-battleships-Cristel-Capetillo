@@ -24,3 +24,7 @@
 
 ![randomFinal](https://user-images.githubusercontent.com/69099899/120718740-10400100-c4ca-11eb-9d02-2ea67e8ed045.gif)
 
+- Console Battleships:
+
+![battleshipFinal](https://user-images.githubusercontent.com/69099899/120830990-601cd780-c55f-11eb-8ba1-98b037636f9f.gif)
+
